@@ -14,6 +14,8 @@ app.get('/', (req, res) => {
   res.send('Welcome to the VCD Worship Synch App!')
 })
 
+app.use('/breeze', require('./controllers/breeze.js'))
+
 app.use(function (req, res, next) {
 	res.status(404).send('<h1> Page not found </h1>');
 });
